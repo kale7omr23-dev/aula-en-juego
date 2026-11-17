@@ -1,1 +1,15 @@
-{"name":"aula-en-juego","version":"1.0.0","private":true,"type":"module","scripts":{"start":"node server.mjs"},"engines":{"node":">=20"}}
+{
+  "name": "aula-en-juego",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "pg": "^8.16.3"
+  }
+}

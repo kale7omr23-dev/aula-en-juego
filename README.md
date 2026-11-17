@@ -8,3 +8,7 @@ Las salas se conservan en memoria durante un máximo de 24 horas y se pierden al
 Los votos y pulsos se agregan sin mostrar nombres. Los aportes al mural son visibles para el curso y las reflexiones solo para el docente. Es un prototipo de clase con acceso mediante códigos y claves de sesión, sin cuentas institucionales.
 
 El diagnóstico inicial y la actividad de empatía se usaron como contexto. Las estrategias y el nombre del prototipo son decisiones de diseño que deben validarse con participantes.
+
+## Publicación en Vercel
+
+Importar el repositorio como proyecto Other. La configuración sirve public/ y api/room.mjs. Conectar una base PostgreSQL y configurar DATABASE_URL con una cadena de conexión que incluya el SSL requerido por el proveedor. Las tablas se crean al recibir la primera solicitud. Cada sala expira después de 24 horas. Los votos concurrentes se serializan con un bloqueo de fila dentro de una transacción. El servidor local conserva su almacenamiento temporal en memoria.
